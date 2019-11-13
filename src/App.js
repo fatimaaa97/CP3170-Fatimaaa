@@ -72,7 +72,7 @@ export default class App extends React.Component {
       },
       {
         SenderName: "Robert",
-        Mesg: "Stop Pranking me!!",
+        Mesg: "Stop, i do not like this!!",
         Image: "robert.png",
         status: "Inbox"
       }
@@ -136,7 +136,7 @@ export default class App extends React.Component {
                 </IconButton>
               </div>
               <Divider />
-              <List style={{ height: 200, backgroundColor: "lightgrey"}}>
+              <List style={{ height: 200, backgroundColor: "lightgrey" }}>
                 {["Inbox", "Trash", "Important", "Spam"].map((text, index) => (
                   <ListItem
                     button
@@ -177,7 +177,11 @@ export default class App extends React.Component {
               restoreEmail={this.handleRestore}
             />
           ) : this.state.selectedPage === "Important" ? (
-            <Comp1 data={this.state.emailData} FavEmail={this.handleFav} restoreEmail={this.handleRestore}/>
+            <Comp1
+              data={this.state.emailData}
+              FavEmail={this.handleFav}
+              restoreEmail={this.handleRestore}
+            />
           ) : null}
         </main>
       </div>
